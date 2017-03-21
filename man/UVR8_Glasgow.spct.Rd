@@ -23,4 +23,3 @@ disruption of cross-dimer salt bridges.” In:   Science (New York, N.Y.)
 335.6075, pp. 1492–1496. DOI:  10.1126/science.1218091. (Figure S3)
 }
 \keyword{datasets}
-

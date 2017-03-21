@@ -33,4 +33,3 @@ UVB_UV(sun.spct)
 }
 \keyword{manip}
 \keyword{misc}
-

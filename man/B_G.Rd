@@ -32,4 +32,3 @@ B_G(sun.spct)
 }
 \keyword{manip}
 \keyword{misc}
-

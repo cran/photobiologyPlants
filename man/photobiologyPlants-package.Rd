@@ -4,11 +4,11 @@
 \name{photobiologyPlants-package}
 \alias{photobiologyPlants}
 \alias{photobiologyPlants-package}
-\title{Plant 'Photobiology' Related Functions and Data}
+\title{photobiologyPlants: Plant Photobiology Related Functions and Data}
 \description{
-Provides functions for quantifying visible ('VIS') and ultraviolet
-('UV') radiation in relation to the 'photoreceptors' 'Phytochromes',
-'Cryptochromes', and 'UVR8' which are present in plants. It also
+Provides functions for quantifying visible (VIS) and ultraviolet
+(UV) radiation in relation to the photoreceptors Phytochromes,
+Cryptochromes, and UVR8 which are present in plants. It also
 includes data sets on the optical properties of plants.
 }
 \details{
@@ -24,6 +24,7 @@ Package 'photobiologyPlants' is part of a suite of packages for
   discussions and exchanges of ideas that lead to the development of this
   package.
 }
+
 \references{
 Aphalo, P. J., Albert, A., Björn, L. O., McLeod, A. R., Robson, T. M.,
 Rosenqvist, E. (Eds.). (2012). Beyond the Visible: A handbook of best
@@ -47,4 +48,7 @@ M., … Batschauer, A. (2007). The signaling state of Arabidopsis cryptochrome
 \seealso{
 Package \code{\link[photobiology]{photobiology-package}}
 }
+\author{
+\strong{Maintainer}: Pedro J. Aphalo \email{pedro.aphalo@helsinki.fi}
 
+}

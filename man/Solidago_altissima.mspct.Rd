@@ -44,4 +44,3 @@ JaLTER, Japan Long Term Ecological Research Network,
 \url{http://www.jalter.org/}\cr
 }
 \keyword{datasets}
-

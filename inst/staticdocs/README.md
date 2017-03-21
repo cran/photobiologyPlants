@@ -1,7 +1,5 @@
 # R package 'photobiologyPlants' #
 
-[![](http://www.r-pkg.org/badges/version/photobiologyPlants)](https://cran.r-project.org/package=photobiologyPlants) [![](http://cranlogs.r-pkg.org/badges/photobiologyPlants)](https://cran.r-project.org/package=photobiologyPlants) [![](http://cranlogs.r-pkg.org/badges/grand-total/photobiologyPlants)](https://cran.r-project.org/package=photobiologyPlants)
-
 Package '**photobiologyPlants**' provides pre-defined functions for quantifying 
 visible ('VIS') and ultraviolet ('UV') radiation in relation to the
 photoreceptors 'Phytochromes', 'Cryptochromes', and 'UVR8' which are present in

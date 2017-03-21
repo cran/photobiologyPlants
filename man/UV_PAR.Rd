@@ -33,4 +33,3 @@ UV_PAR(sun.spct)
 }
 \keyword{manip}
 \keyword{misc}
-

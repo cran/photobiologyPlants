@@ -33,4 +33,3 @@ R_FR(sun.spct)
 }
 \keyword{manip}
 \keyword{misc}
-

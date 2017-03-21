@@ -24,4 +24,3 @@ Banerjee, R., Schleicher, E., Meier, S., Viana, R. M., Pokorny,
   14916–14922. doi:10.1074/jbc.M700616200
 }
 \keyword{datasets}
-
