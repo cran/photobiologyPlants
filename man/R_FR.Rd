@@ -4,7 +4,8 @@
 \alias{R_FR}
 \title{Calculate R:FR photon ratio from spectral irradiance.}
 \usage{
-R_FR(spct, std = "Smith10", use.cached.mult = FALSE, use.hinges = TRUE)
+R_FR(spct, std = "Smith10", use.cached.mult = FALSE,
+  use.hinges = TRUE)
 }
 \arguments{
 \item{spct}{an object of class "source.spct"}

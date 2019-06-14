@@ -5,7 +5,7 @@
 \alias{McCree_photosynthesis.mspct}
 \title{McCree's action spectra for whole-leaf photosynthesis.}
 \format{A \code{response_mspct} object with two member \code{response_spct}
-  objects each with 200 rows and 2 numeric variables, \code{w.length} and
+  objects each with 300 rows and 2 numeric variables, \code{w.length} and
   \code{s.e.response}.}
 \description{
 The 'classical' action spectra of K. J. McCree (1972) for
@@ -16,6 +16,9 @@ The 'classical' action spectra of K. J. McCree (1972) for
 }
 \note{
 Digitised from bitmap of from the original publicatiom.
+
+If you use these data in a publication, please cite also the original
+  source as given under references.
 }
 \references{
 McCree, K. J. (1972) Significance of Enhancement for Calculations

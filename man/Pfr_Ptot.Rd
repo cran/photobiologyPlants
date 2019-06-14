@@ -47,6 +47,10 @@ A method implemented for objects of different classes.
   Calculate phytochrome photoequilibrium from spectral (photon) irradiance
 }}
 
+\note{
+If you use these data in a publication, please cite also the original
+  source as given under references.
+}
 \references{
 Mancinelli, A.L. (1994) The physiology of phytochrome action. In
 Photomorphogenesis in plants, 2nd edition. R.E. Kendrick and G.H.M.

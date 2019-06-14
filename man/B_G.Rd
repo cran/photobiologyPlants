@@ -4,7 +4,8 @@
 \alias{B_G}
 \title{Calculate B:G photon ratio from spectral irradiance.}
 \usage{
-B_G(spct, std = "Sellaro", use.cached.mult = FALSE, use.hinges = TRUE)
+B_G(spct, std = "Sellaro", use.cached.mult = FALSE,
+  use.hinges = TRUE)
 }
 \arguments{
 \item{spct}{an object of class "source.spct"}
