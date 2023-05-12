@@ -4,8 +4,7 @@
 \alias{UVB_PAR}
 \title{Calculate UVB:PAR photon ratio from spectral irradiance.}
 \usage{
-UVB_PAR(spct, std = "ISO", use.cached.mult = FALSE,
-  use.hinges = TRUE)
+UVB_PAR(spct, std = "ISO", use.cached.mult = FALSE, use.hinges = TRUE)
 }
 \arguments{
 \item{spct}{an object of class "source.spct"}
@@ -32,5 +31,7 @@ spectrum.
 UVB_PAR(sun.spct)
 
 }
-\keyword{manip}
-\keyword{misc}
+\seealso{
+\code{link[photobiologyWavebands]{UVB}},
+  \code{link[photobiologyWavebands]{PAR}}.
+}

@@ -1,21 +1,25 @@
 
-# photobiologyPlants
+# photobiologyPlants <img src="man/figures/logo.png" align="right" width="120" />
+
+<!-- badges: start -->
 
 [![CRAN
 version](https://www.r-pkg.org/badges/version-last-release/photobiologyPlants)](https://cran.r-project.org/package=photobiologyPlants)
 [![cran
 checks](https://cranchecks.info/badges/worst/photobiologyPlants)](https://cran.r-project.org/web/checks/check_results_photobiologyPlants.html)
+[![R-CMD-check](https://github.com/aphalo/photobiologyPlants/workflows/R-CMD-check/badge.svg)](https://github.com/aphalo/photobiologyPlants/actions)
+<!-- badges: end -->
 
 Package ‘**photobiologyPlants**’ provides pre-defined functions for
-quantifying visible (‘VIS’) and ultraviolet (‘UV’) radiation in relation
-to their efefcts on plants together with action spectra for
-photosynthesis and absorbance spectra for the plant photoreceptors in
-families ‘phytochromes’, ‘cryptochromes’, ‘phototropins’ and ‘UVR8s’
-which are present in plants. It also includes data sets on the optical
-properties of plant organs, photosynthesis and plant pigments,
-chlorophylls and carotenoids. All data are derived from the scientific
-literature. Please, see the help pages for the different data sets for
-details about the sources used.
+quantifying visible (‘VIS’), near infra-red (‘NIR’) and ultraviolet
+(‘UV’) radiation in relation to their effects on plants together with
+action spectra for photosynthesis and absorbance spectra for the plant
+photoreceptors in families ‘phytochromes’, ‘cryptochromes’, ‘zeitlupe
+proteins’, ‘phototropins’ and ‘UVR8s’ which are present in plants. It
+also includes data sets on the optical properties of plant organs,
+photosynthesis and plant pigments, chlorophylls and carotenoids. All
+data are derived from the scientific literature. Please, see the help
+pages for the different data sets for details about the sources used.
 
 The data in this package are stored in objects of classes defined in
 package ‘**photobiology**’ which are mostly backwards compatible with
@@ -57,8 +61,8 @@ example solar spectrum at ground level from package ‘photobiology’.
 
 ``` r
 R_FR(sun.spct)
-#>  Red.Smith10: FarRed.Smith10(q:q) 
-#>                          1.266704 
+#> R:FR[q:q] 
+#>  1.266704 
 #> attr(,"radiation.unit")
 #> [1] "q:q ratio"
 ```
@@ -116,7 +120,7 @@ Division of Plant Biology. ISBN 978-952-10-8363-1 (PDF),
 ## Contributing
 
 Pull requests, bug reports, and feature requests are welcome at
-(<https://bitbucket.org/aphalo/photobiology>).
+(<https://github.com/aphalo/photobiologyPlants>).
 
 ## Citation
 
@@ -125,11 +129,10 @@ publications, please cite according to:
 
 ``` r
 citation("photobiologyPlants")
-#> 
 #> To cite package 'photobiologyPlants' in publications, please use:
 #> 
-#>   Aphalo, Pedro J. (2015) The r4photobiology suite. UV4Plants
-#>   Bulletin, 2015:1, 21-29. DOI:10.19232/uv4pb.2015.1.14
+#>   Aphalo, Pedro J. (2015) The r4photobiology suite. UV4Plants Bulletin,
+#>   2015:1, 21-29. DOI:10.19232/uv4pb.2015.1.14
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
@@ -147,6 +150,6 @@ citation("photobiologyPlants")
 
 ## License
 
-© 2015-2019 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
+© 2015-2023 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
 the GPL, version 2 or greater. This software carries no warranty of any
 kind.

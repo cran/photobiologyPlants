@@ -4,9 +4,11 @@
 \name{chlorophylls_fluorescence.mspct}
 \alias{chlorophylls_fluorescence.mspct}
 \title{Fluorescence emission spectra for chlorophylls.}
-\format{A \code{filter_mspct} with three member \code{filter_spct} objects
+\format{
+A \code{filter_mspct} with three member \code{filter_spct} objects
   each with variable number of rows and 2 numeric variables, \code{w.length}
-  and \code{A}}
+  and \code{A}
+}
 \description{
 Optical absorption spectra of chlorophyll a in methanol and chlorophylls a
 and by in diethyl ether containing the wavelengths at 1 nm interval.

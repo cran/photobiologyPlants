@@ -4,8 +4,10 @@
 \name{PHOTs.mspct}
 \alias{PHOTs.mspct}
 \title{PHOT1 and PHOT2 absorbance spectra.}
-\format{A \code{filter_mspct} with five member \code{filter_spct} objects each
-  with 300 rows and 2 numeric variables, \code{w.length} and \code{A}}
+\format{
+A \code{filter_mspct} with five member \code{filter_spct} objects each
+  with 300 rows and 2 numeric variables, \code{w.length} and \code{A}
+}
 \description{
 A dataset containing the wavelengths at an arbitrary nm interval. Tabulated
 values for the in vitro absorbance spectrum of PHOT1 LOV2 domain for

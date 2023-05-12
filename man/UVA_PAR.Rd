@@ -4,8 +4,7 @@
 \alias{UVA_PAR}
 \title{Calculate UVA:PAR photon ratio from spectral irradiance.}
 \usage{
-UVA_PAR(spct, std = "ISO", use.cached.mult = FALSE,
-  use.hinges = TRUE)
+UVA_PAR(spct, std = "ISO", use.cached.mult = FALSE, use.hinges = TRUE)
 }
 \arguments{
 \item{spct}{an object of class "source.spct"}
@@ -32,5 +31,7 @@ spectrum.
 UVA_PAR(sun.spct)
 
 }
-\keyword{manip}
-\keyword{misc}
+\seealso{
+\code{link[photobiologyWavebands]{UVA}},
+  \code{link[photobiologyWavebands]{PAR}}.
+}

@@ -4,9 +4,11 @@
 \name{chlorophylls.mspct}
 \alias{chlorophylls.mspct}
 \title{Absorbance spectra for chlorophylls.}
-\format{A \code{filter_mspct} with three member \code{filter_spct} objects
+\format{
+A \code{filter_mspct} with three member \code{filter_spct} objects
   each with variable number of rows and 2 numeric variables, \code{w.length}
-  and \code{A}}
+  and \code{A}
+}
 \description{
 Optical absorption spectra of chlorophyll a in methanol and chlorophylls
 a and by in diethyl ether containing the wavelengths at 1 nm interval.
@@ -20,8 +22,7 @@ Data from PhotochemCAD 2.1a has been munged on 2 June 2017 by Scott
   Prahl (\url{https://omlc.org/}) to make the information available to
   non-Windows users. Although he has tried to be as careful as possible, he
   may have introduced some error; the cautious user is advised to compare
-  these results with the original sources at
-  \url{https://www.photochemcad.com/} (Du et al., 1998; Dixon et al., 2005).
+  these results with the original sources (Du et al., 1998; Dixon et al., 2005).
 
 The spectral absorption measurements of chlorophyll a in methanol,
 chlorophyll a and chlorophyll b in diethyl ether were made by J. Li on

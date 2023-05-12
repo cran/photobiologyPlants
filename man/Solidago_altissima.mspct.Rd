@@ -4,8 +4,10 @@
 \name{Solidago_altissima.mspct}
 \alias{Solidago_altissima.mspct}
 \title{Spectral optical data for 'Solidago altissima' leaves}
-\format{\code{object_mspct} collection object with four \code{object_spct}
-member objects, each with 651 rows and 3 variables}
+\format{
+\code{object_mspct} collection object with four \code{object_spct}
+member objects, each with 651 rows and 3 variables
+}
 \usage{
 Solidago_altissima.mspct
 }

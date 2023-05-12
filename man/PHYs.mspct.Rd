@@ -5,9 +5,11 @@
 \alias{PHYs.mspct}
 \alias{phytochrome.spct}
 \title{Tabulated data for Phytochrome Sigma}
-\format{A \code{generic_mspct} with one member \code{generic_spct} object
+\format{
+A \code{generic_mspct} with one member \code{generic_spct} object
   with 49 rows and 3 numeric variables, \code{w.length}, \code{Sigma.R} and
-  \code{Sigma.FR}.}
+  \code{Sigma.FR}.
+}
 \description{
 A dataset containing the wavelengths at a 1 nm interval.
   Tabulated values for Sigma R and Sigma FR for Type I Phytochrome as
@@ -27,7 +29,6 @@ Mancinelli, A.L. (1994) The physiology of phytochrome action. In
 Photomorphogenesis in plants, 2nd edition. R.E. Kendrick and G.H.M.
 Kronenberg, eds. Kluwer Academic Publishers, Dordrecht, pp. 211-269. ISBN
 978-0-7923-2551-2 (print), 978-94-011-1884-2 (on-line).
-\href{http://dx.doi.org/10.1007/978-94-011-1884-2_10}{DOI
-10.1007/978-94-011-1884-2_10}
+\doi{10.1007/978-94-011-1884-2_10}
 }
 \keyword{datasets}

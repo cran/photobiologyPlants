@@ -4,14 +4,16 @@
 \name{carotenoids.mspct}
 \alias{carotenoids.mspct}
 \title{Absorbance spectra for carotenoids.}
-\format{A \code{filter_mspct} with eight member \code{filter_spct} objects each
-  with 300 rows and 2 numeric variables, \code{w.length} and \code{A}}
+\format{
+A \code{filter_mspct} with eight member \code{filter_spct} objects each
+  with 300 rows and 2 numeric variables, \code{w.length} and \code{A}
+}
 \description{
 A dataset containing the wavelengths at an arbitrary nm interval. Tabulated
 values for the in vitro absorbance spectrum of beta-carotene, lutein, lycopene,
 3-4,di-hydro-lycopene, phytoene, phytofluene, violaxanthin and zeaxanthin.
 Data were digitized from plots downloaded from LipidBase
-(\url{http://lipidbank.jp/}), The official database of Japanese Conference
+(\url{https://lipidbank.jp/}), The official database of Japanese Conference
 on the Biochemistry of Lipids (JCBL). Data contributed to LipinBank by
 Takaichi Sinichi.
 }

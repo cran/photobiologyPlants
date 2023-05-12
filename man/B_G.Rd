@@ -4,8 +4,7 @@
 \alias{B_G}
 \title{Calculate B:G photon ratio from spectral irradiance.}
 \usage{
-B_G(spct, std = "Sellaro", use.cached.mult = FALSE,
-  use.hinges = TRUE)
+B_G(spct, std = "Sellaro", use.cached.mult = FALSE, use.hinges = TRUE)
 }
 \arguments{
 \item{spct}{an object of class "source.spct"}
@@ -31,5 +30,7 @@ This function returns the blue:green photon ratio of a light source spectrum.
 B_G(sun.spct)
 
 }
-\keyword{manip}
-\keyword{misc}
+\seealso{
+\code{link[photobiologyWavebands]{Blue}},
+  \code{link[photobiologyWavebands]{Green}}.
+}

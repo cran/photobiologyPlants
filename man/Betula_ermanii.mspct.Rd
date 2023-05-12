@@ -4,8 +4,10 @@
 \name{Betula_ermanii.mspct}
 \alias{Betula_ermanii.mspct}
 \title{Spectral data for 'Betula ermanii' leaves}
-\format{\code{object_mspct} collection object with six \code{object_spct}
-member objects, each with 651 rows and 3 variables}
+\format{
+\code{object_mspct} collection object with six \code{object_spct}
+member objects, each with 651 rows and 3 variables
+}
 \usage{
 Betula_ermanii.mspct
 }
