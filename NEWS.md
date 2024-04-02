@@ -1,3 +1,9 @@
+photobiologyPlants 0.5.0
+========================
+
+* Add `UVB_UVA()`.
+* Rebuild data objects with photobiology 0.11.2.
+
 photobiologyPlants 0.4.3
 ========================
 

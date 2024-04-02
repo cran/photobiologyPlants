@@ -6,8 +6,11 @@
 [![CRAN
 version](https://www.r-pkg.org/badges/version-last-release/photobiologyPlants)](https://cran.r-project.org/package=photobiologyPlants)
 [![cran
-checks](https://cranchecks.info/badges/worst/photobiologyPlants)](https://cran.r-project.org/web/checks/check_results_photobiologyPlants.html)
-[![R-CMD-check](https://github.com/aphalo/photobiologyPlants/workflows/R-CMD-check/badge.svg)](https://github.com/aphalo/photobiologyPlants/actions)
+checks](https://badges.cranchecks.info/worst/photobiologyPlants.svg)](https://cran.r-project.org/web/checks/check_results_photobiologyPlants.html)
+[![R Universe
+vwersion](https://aphalo.r-universe.dev/badges/photobiologyPlants)](https://aphalo.r-universe.dev/photobiologyPlants)
+[![R build
+status](https://github.com/aphalo/photobiologyPlants/workflows/R-CMD-check/badge.svg)](https://github.com/aphalo/photobiologyPlants/actions)
 <!-- badges: end -->
 
 Package ‘**photobiologyPlants**’ provides pre-defined functions for
@@ -19,11 +22,12 @@ proteins’, ‘phototropins’ and ‘UVR8s’ which are present in plants. It
 also includes data sets on the optical properties of plant organs,
 photosynthesis and plant pigments, chlorophylls and carotenoids. All
 data are derived from the scientific literature. Please, see the help
-pages for the different data sets for details about the sources used.
+pages for the different data sets for details about the primary sources
+of the data.
 
 The data in this package are stored in objects of classes defined in
 package ‘**photobiology**’ which are mostly backwards compatible with
-data frames.
+data frames but include metadata as attributes.
 
 This package is part of a suite of R packages for photobiological
 calculations described at the
@@ -32,16 +36,13 @@ calculations described at the
 ## Examples
 
 ``` r
-library(ggspectra)
 library(photobiologyPlants)
+eval_plots <- requireNamespace("ggspectra", quietly = TRUE)
+if (eval_plots) library(ggspectra)
 ```
 
-We plot the action spectrum of photosynthesis in Oats.
-
-``` r
-comment(McCree_photosynthesis.mspct$oats)
-#> [1] "One of the 'classical' action spectra of K. J. McCree (1972) Avena sativa L. var. Coronado."
-```
+Spectral data are stored in R objects of classes defined in package
+‘photobiology’.
 
 ``` r
 class(McCree_photosynthesis.mspct$oats)
@@ -49,15 +50,38 @@ class(McCree_photosynthesis.mspct$oats)
 #> [5] "data.frame"
 ```
 
+Objects contain metadata that can be queried. The `comment` attribute
+commonly used in R.
+
 ``` r
-autoplot(McCree_photosynthesis.mspct$oats, 
-         annotations = c("+", "title:none:what"))
+comment(McCree_photosynthesis.mspct$oats)
+#> [1] "One of the 'classical' action spectra of photosynthesis from K. J. McCree (1972): Avena sativa L. var. Coronado leaf sections."
 ```
 
-![](man/figures/README-example1a-1.png)<!-- -->
+And also other attributes defined in package ‘photobiology’.
 
-We can calculate the R:FR photon ratio of a spectrum, in this case an
-example solar spectrum at ground level from package ‘photobiology’.
+``` r
+what_measured(McCree_photosynthesis.mspct$oats)
+#> [1] "Action spectrum of net CO2 uptake in Avena sativa L. var. Coronado (McCree 1972)."
+how_measured(McCree_photosynthesis.mspct$oats)
+#> [1] "Net CO2 uptake measured on detached leaf sections after about 2 to 10 minutes equilibration time at each wavelength"
+is_normalised(McCree_photosynthesis.mspct$oats)
+#> [1] TRUE
+```
+
+Functions defined in package ‘ggspectra’ make plotting easy. For
+example, to plot the action spectrum of photosynthesis in Oats we can
+use.
+
+``` r
+autoplot(McCree_photosynthesis.mspct$oats, unit.out = "photon")
+```
+
+![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
+
+We can calculate the R:FR photon ratio of a light-source or iradiance
+spectrum, in this case the solar spectrum at ground level measured on at
+a specific location and time, included in package ‘photobiology’.
 
 ``` r
 R_FR(sun.spct)
@@ -77,23 +101,34 @@ Pfr_Ptot(sun.spct)
 
 ## Installation
 
-Installation of the most recent stable version from CRAN:
+Installation of the most recent released version from CRAN (source and
+binaries available):
 
 ``` r
 install.packages("photobiologyLamps")
 ```
 
-Installation of the current unstable version from Bitbucket:
+Installation of the current unstable version from R-Universe CRAN-like
+repository (source and binaries available):
 
 ``` r
-# install.packages("devtools")
-devtools::install_bitbucket("aphalo/photobiologylamps")
+install.packages('photobiologySun', 
+                 repos = c('https://aphalo.r-universe.dev', 
+                           'https://cloud.r-project.org'))
+```
+
+Installation of the current unstable version from GitHub (only source
+available):
+
+``` r
+# install.packages("remotes")
+remotes::install_github("aphalo/photobiologylamps")
 ```
 
 ## Documentation
 
 HTML documentation is available at
-(<https://docs.r4photobiology.info/photobiologyPlants/>), including a
+(<https://docs.r4photobiology.info/photobiologyPlants/>), including the
 *User Guide*.
 
 News on updates to the different packages of the ‘r4photobiology’ suite
@@ -129,7 +164,7 @@ publications, please cite according to:
 
 ``` r
 citation("photobiologyPlants")
-#> To cite package 'photobiologyPlants' in publications, please use:
+#> To cite package ‘photobiologyPlants’ in publications use:
 #> 
 #>   Aphalo, Pedro J. (2015) The r4photobiology suite. UV4Plants Bulletin,
 #>   2015:1, 21-29. DOI:10.19232/uv4pb.2015.1.14
@@ -150,6 +185,6 @@ citation("photobiologyPlants")
 
 ## License
 
-© 2015-2023 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
+© 2015-2024 Pedro J. Aphalo (<pedro.aphalo@helsinki.fi>). Released under
 the GPL, version 2 or greater. This software carries no warranty of any
 kind.

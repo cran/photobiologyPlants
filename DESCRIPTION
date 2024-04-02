@@ -1,8 +1,8 @@
 Package: photobiologyPlants
 Type: Package
 Title: Plant Photobiology Related Functions and Data
-Version: 0.4.3
-Date: 2023-05-11
+Version: 0.5.0
+Date: 2024-04-01
 Authors@R: 
     person("Pedro J.", "Aphalo", email = "pedro.aphalo@helsinki.fi", role = c("aut", "cre"), comment = c(ORCID = "https://orcid.org/0000-0003-3385-972X"))
 Maintainer: Pedro J. Aphalo <pedro.aphalo@helsinki.fi>
@@ -13,10 +13,10 @@ Description: Provides functions for quantifying visible (VIS) and ultraviolet
     suite, Aphalo P. J. (2015) <doi:10.19232/uv4pb.2015.1.14>.
 License: GPL (>= 2)
 VignetteBuilder: knitr
-Depends: R (>= 4.0.0), photobiology (>= 0.10.15), photobiologyWavebands
-        (>= 0.5.1)
-Suggests: knitr (>= 1.40), rmarkdown (>= 2.20), ggplot2 (>= 3.4.0),
-        ggspectra (>= 0.3.11)
+Depends: R (>= 4.0.0), photobiology (>= 0.11.2), photobiologyWavebands
+        (>= 0.5.2)
+Suggests: knitr (>= 1.45), rmarkdown (>= 2.26), ggplot2 (>= 3.4.0),
+        ggspectra (>= 0.3.12)
 LazyLoad: yes
 LazyData: yes
 ByteCompile: true
@@ -24,9 +24,9 @@ Encoding: UTF-8
 URL: https://docs.r4photobiology.info/photobiologyPlants/
         https://github.com/aphalo/photobiologyplants
 BugReports: https://github.com/aphalo/photobiologyplants/issues
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 NeedsCompilation: no
-Packaged: 2023-05-12 15:26:10 UTC; aphalo_2
+Packaged: 2024-04-02 10:36:09 UTC; aphalo
 Author: Pedro J. Aphalo [aut, cre] (<https://orcid.org/0000-0003-3385-972X>)
 Repository: CRAN
-Date/Publication: 2023-05-12 17:40:02 UTC
+Date/Publication: 2024-04-02 11:30:02 UTC
