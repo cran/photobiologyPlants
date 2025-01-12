@@ -3,7 +3,7 @@ knitr::opts_chunk$set(fig.width=7.2, fig.height=4.3)
 
 ## ----printing-spectra, eval=TRUE, include=FALSE-------------------------------
 # library(tibble)
-options(tibble.print_max = 6, tibble.print_min = 4)
+old.options <- options(tibble.print_max = 6, tibble.print_min = 4)
 
 ## ----message=FALSE------------------------------------------------------------
 library(photobiology)
@@ -36,7 +36,7 @@ Pfr_Ptot(c(660, 735))
 Pfr_Ptot(435)
 
 ## ----eval = eval_plots--------------------------------------------------------
-autoplot(Pfr_Ptot(300:770), norm = NULL, unit.out = "photon",
+autoplot(Pfr_Ptot(300:770), unit.out = "photon",
          w.band = Plant_bands(),
          annotations = c("colour.guide", "labels", "boxes")) +
   labs(y = "Phytochrome photoequilibrium, Pfr:Ptot ratio")
@@ -80,7 +80,7 @@ names(CRYs.mspct)
 
 ## ----eval = eval_plots--------------------------------------------------------
 A_as_default()
-autoplot(interpolate_wl(CRYs.mspct$CRY2_dark, 300:500))
+autoplot(CRYs.mspct$CRY2_dark)
 
 ## ----eval = eval_plots, warning=FALSE-----------------------------------------
 autoplot(CRYs.mspct[c("CRY2_dark", "CRY2_light")])
@@ -148,6 +148,9 @@ names(chlorophylls.mspct)
 ## ----eval = eval_plots--------------------------------------------------------
 autoplot(chlorophylls.mspct[c("Chl_a_DME", "Chl_b_DME")]) 
 
+## ----eval = eval_plots--------------------------------------------------------
+autoplot(chlorophylls.mspct[c("Chl_a_DME", "Chl_a_MethOH")]) 
+
 ## -----------------------------------------------------------------------------
 names(chlorophylls_fluorescence.mspct)
 
@@ -174,4 +177,69 @@ autoplot(as.filter_mspct(Betula_ermanii.mspct))
 
 ## ----eval = eval_plots--------------------------------------------------------
 autoplot(as.reflector_mspct(Betula_ermanii.mspct)) 
+
+## -----------------------------------------------------------------------------
+names(leaf_fluorescence.mspct)
+
+## ----eval = eval_plots--------------------------------------------------------
+autoplot(leaf_fluorescence.mspct$wheat_Fo_ex355nm)
+
+## -----------------------------------------------------------------------------
+water_vp_sat(20) # temperature in C, partial pressure in Pa
+water_vp_sat(20) * 1e-3 # temperature in C, partial pressure in kPa
+
+## -----------------------------------------------------------------------------
+vp_sat.df <- data.frame(temperature = -20:100,
+                        vp.sat = c(water_vp_sat(-20:-1, over.ice = TRUE),
+                                   water_vp_sat(0:100)) * 1e-3)
+
+ggplot(vp_sat.df, aes(temperature, vp.sat)) +
+  geom_line() +
+  labs(x = "Temperature (C)", y = "Water valour pressure at saturation (kPa)")
+
+## -----------------------------------------------------------------------------
+water_vp2RH(1000, 25) # Pa and C -> RH%
+
+## -----------------------------------------------------------------------------
+water_vp2mvc(1000, 25) # Pa and C ->  mass per volume g m-3
+
+## -----------------------------------------------------------------------------
+water_dp(1000) # Pa -> C 
+
+## -----------------------------------------------------------------------------
+water_fp(500) # Pa -> C 
+
+## -----------------------------------------------------------------------------
+ET_ref(temperature = 20, # C
+       water.vp = water_RH2vp(relative.humidity = 70, # RH%
+                              temperature = 20), # C -> Pa
+       wind.speed = 0, # m s-1
+       net.irradiance = 100) # W m-2
+
+## -----------------------------------------------------------------------------
+ET_ref_day(temperature = 20, # C daily mean
+           water.vp = 1636.616, # Pa daily mean
+           wind.speed = 5, # m s-1 daily mean
+           net.radiation = 15e6) # 15 MJ / d / m2 daily total !
+
+## -----------------------------------------------------------------------------
+ET_ref(temperature = 20, # C
+       water.vp = water_RH2vp(relative.humidity = (1:9) * 10, # RH%
+                              temperature = 20), # C -> Pa
+       wind.speed = 5, # m s-1
+       net.irradiance = 10) # W m-2
+
+## -----------------------------------------------------------------------------
+ET_ref_irrad.df <-
+  data.frame(irrad = (1:40) * 10,
+             ET.ref = ET_ref(temperature = 20, # C
+                             water.vp = water_RH2vp(relative.humidity = 70, # RH%
+                                                    temperature = 20), # C -> Pa
+                             wind.speed = 5, # m s-1
+                             net.irradiance = (1:40) * 10) # W m-2
+  )
+ggplot(ET_ref_irrad.df, aes(irrad, ET.ref)) +
+  geom_line() +
+  labs(x = expression("Global radiation "*(W~m^{-2})),
+       y = expression("Reference evapotranspiration "*(mm~h^{-1})))
 
