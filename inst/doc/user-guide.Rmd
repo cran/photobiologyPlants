@@ -47,12 +47,25 @@ theme_set(theme_bw())
 
 ## Photon ratios relevant to plants
 
-`R_FR()`, `B_G()`, `UVB_UV()`, `UVA_UV()`, `UV_PAR()`, `UVB_PAR()`, `UVA_PAR()` are convenience functions implemented using function `q_ratio()` from package
-'photobiology' and waveband definitions from package 'photobiiologyWavebands'
-with defaults as commonly used in the field of _plant photobiology_.
+`R_FR()` and other functions for computing photon ratios are convenience 
+functions implemented using function `q_ratio()` and `q_irrad()` from package
+'photobiology' and waveband definitions from package 'photobiologyWavebands'
+with defaults arguments to parameter `std` for wavelength ranges commonly used 
+in the field of _plant photobiology_. These functions can be used with one or 
+more spectra as argument.
 
 ```{r}
 R_FR(sun.spct)
+```
+
+Here, the argument named `attr2tb` is forwarded to method `q_ratio` from 
+package 'photobiology' to copy metadata from the spectra into the returned
+data frame.
+
+```{r}
+R_FR(sun_evening.spct, 
+     std = "Smith20", 
+     attr2tb = c("when.measured" = "time.UTC", "lat" = "latitude"))
 ```
 
 ## Calculating the phytochrome photoequilibrium
@@ -257,6 +270,7 @@ names(carotenoids.mspct)
 autoplot(carotenoids.mspct[1:4], 
          annotations = c("-", "labels", "boxes")) 
 ```
+
 ```{r, eval = eval_plots}
 autoplot(carotenoids.mspct[5:length(carotenoids.mspct)], 
          annotations = c("-", "labels", "boxes")) 
@@ -357,9 +371,11 @@ Conversion of water vapour pressure to relative humidity and vice versa is based
 ```{r}
 water_vp2RH(1000, 25) # Pa and C -> RH%
 ```
+
 ```{r}
 water_vp2mvc(1000, 25) # Pa and C ->  mass per volume g m-3
 ```
+
 The reverse conversion functions are `water_RH2vp()`, `water_mvc2vp()`.
 
 If we know the actual vapour pressure we can compute at which temperature this

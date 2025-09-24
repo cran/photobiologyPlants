@@ -1,3 +1,25 @@
+
+photobiologyPlants 0.6.1
+========================
+
+In recent years a few new photon ratios and irradiances have been proposed to
+describe light spectra in relation to plants responses. This update adds 
+functions to easily compute them.
+
+* Track enhancements in packages 'photobiology' (>= 0.14.0) and 
+'photobiologyWavebands' (>= 0.5.3).
+* Add parameter `na.rm` and checks for NAs and low wavelength resolution to the 
+`Pfr_Ptot()` method for `source_spct` objects.
+* Add methods `xPAR_irrad()` to compute extended photosynthetically active 
+radiation photon irradiance in constrained (xPAR) and unconstrained (ePAR), and 
+their PAR and far-red (FR) components.
+* Add function `FR_RpFR()`, `R_RpFR()`, `FR_PAR()`, `FR_ePAR()`, `UVA1_UVA()`, 
+`UVA2_UVA()` and update all functions for computing photon
+ratios to forward additional named arguments to `q_ratio()`.
+* _Breaking:_ Change default in `R_FR()` from `"Smith10"` into `"Smith20`".
+* Collect the documentation of all functions for computing different photon
+ratios into a single help page. 
+
 photobiologyPlants 0.6.0
 ========================
 
