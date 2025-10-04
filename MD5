@@ -1,6 +1,6 @@
-f6159241a0e9b1ac9b0f3130a60ac4ec *DESCRIPTION
+6ef97332c0978230050dab85f556ddb1 *DESCRIPTION
 b0f02dafd059387377f0bf104d6638ca *NAMESPACE
-b194b41d282fd4a11574242dfca0f8a0 *NEWS.md
+9675ca3dda413c3ee330a722f2d5e2f7 *NEWS.md
 89692aaf2a5da050a5bb743172436c81 *R/McCree-photosynthesis-mspct.R
 54a2b7b8937b46b96c82b3f0ed0e6d44 *R/Pfr-P-ratio-mono.R
 ec261b0f85a3cc8b09790f8de92714f8 *R/Pfr-P-ratio.R
@@ -42,10 +42,10 @@ fdfab2a15b2fc7056bf7a6f20142f24c *data/carotenoids-mspct.rda
 5f61f4f5f822a6d17cda60c2d76caecc *inst/CITATION
 eaa76a561f7f77a04c16281c188b401d *inst/doc/r4p-introduction.R
 53bf59ee32816c99af89e768b2063276 *inst/doc/r4p-introduction.Rmd
-847e03ca24778feec4bc494c4695c516 *inst/doc/r4p-introduction.html
+7c3a497179cb478b5d0492256e33601d *inst/doc/r4p-introduction.html
 4582391591dd2ef603e697f467ebf7bf *inst/doc/user-guide.R
 d4f09e5631294ef17e4ebecd89779b48 *inst/doc/user-guide.Rmd
-9dd39a58a614de09e3800c0405f06ccc *inst/doc/user-guide.html
+90439028de7d09f60e6d5f1f2ff3fcd7 *inst/doc/user-guide.html
 1a0438b76096f5c9695ff4977116cbe5 *man/Betula_ermanii.mspct.Rd
 eb31436698b1dd460f1836427b745a40 *man/CRYs.mspct.Rd
 8e348323a961d93c2597c186e6c7cbda *man/ET_ref.Rd
